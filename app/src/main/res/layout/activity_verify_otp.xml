@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyOtpActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/verificode"
+            android:layout_width="310dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/raleway"
+            android:hint="Enter code"
+            android:inputType="textPassword"
+            android:textColorHint="#2E2E2E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logintitle" />
+
+        <ImageView
+            android:id="@+id/password_png"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="-338dp"
+            android:layout_marginTop="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/padlock" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/verifibtn"
+        android:layout_width="335dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#2BC990"
+        android:fontFamily="@font/raleway_bold"
+        android:text="verify"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

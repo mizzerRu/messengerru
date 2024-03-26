@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RuMessanger</string>
+    <string name="type_your_message">Type your message...</string>
+    <string name="message">Message</string>
+    <string name="выход">выход</string>
+    <string name="rumessanger">RuMessanger</string>
+</resources>
