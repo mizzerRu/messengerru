@@ -3,6 +3,7 @@ import com.android.build.gradle.internal.parseAdditionalLibraries
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 
 }
 

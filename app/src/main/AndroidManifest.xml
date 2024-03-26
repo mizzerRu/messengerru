@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".OTP.MyApplication"
         android:allowBackup="true"
-        android:name=".MyApplication"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,26 +18,45 @@
         android:theme="@style/Theme.RuMessanger"
         android:usesCleartextTraffic="true"
         tools:targetApi="tiramisu">
+
         <activity
-            android:name=".VerifyOtpActivity"
+            android:name=".MembersList.SearchContactActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".OTP.VerifyOTPActivity"
+            android:usesCleartextTraffic="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
+        <activity
+            android:name=".OTP.SendOTPActivity"
+            android:screenOrientation="portrait"
+            android:usesCleartextTraffic="true"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity android:name=".OTP.createUsers"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:usesCleartextTraffic="true"
+            android:exported="false"/>
+
         <activity
             android:name=".ChatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:usesCleartextTraffic="true" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
         <activity
-            android:name=".RegistrActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:usesCleartextTraffic="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

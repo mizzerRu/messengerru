@@ -3,6 +3,7 @@ package com.rumessanger.msg.users;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,11 +13,14 @@ import com.rumessanger.msg.R;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
 
     private ArrayList<User> users;
 
     public UsersAdapter(ArrayList<User> users){
+
         this.users = users;
     }
 

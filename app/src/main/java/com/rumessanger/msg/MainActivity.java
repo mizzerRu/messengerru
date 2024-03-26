@@ -1,13 +1,11 @@
 package com.rumessanger.msg;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.rumessanger.msg.OTP.SendOTPActivity;
 import com.rumessanger.msg.bottomnav.chats.ChatFragment;
 import com.rumessanger.msg.bottomnav.new_chat.NewChatFragment;
 import com.rumessanger.msg.bottomnav.profile.ProfileFragment;
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, SendOTPActivity.class);
             startActivity(intent);
         }
 
@@ -41,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(), fragment).commit();
             return true;
         });
+
     }
 }
 

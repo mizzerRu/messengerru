@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#373737"
+    android:background="#FF2C2C2C"
     tools:context=".bottomnav.new_chat.NewChatFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="850dp"
         android:layout_marginTop="8dp"
+        android:background="#FF2C2C2C"
         app:layout_constraintEnd_toEndOf="@+id/rusmes"
         app:layout_constraintStart_toStartOf="@+id/rusmes"
         app:layout_constraintTop_toBottomOf="@+id/rusmes" />
@@ -23,7 +24,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/rumessanger"
+        android:text="@string/rumessenger"
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         android:textSize="24sp"
@@ -31,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/searchContactNumber"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginRight="15dp"
@@ -39,6 +40,7 @@
         android:src="@drawable/poisk26search"
         app:layout_constraintBottom_toBottomOf="@+id/rusmes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rusmes" />
+        app:layout_constraintTop_toTopOf="@+id/rusmes"
+        tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
-import com.rumessanger.msg.LoginActivity;
+import com.rumessanger.msg.OTP.SendOTPActivity;
 import com.rumessanger.msg.databinding.FragmentProfleBinding;
 
 import java.io.IOException;
@@ -56,15 +56,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getContext(), LoginActivity.class));
+                startActivity(new Intent(getContext(), SendOTPActivity.class));
             }
         });
 
+
         return binding.getRoot();
     }
-
-
-
 
     ActivityResultLauncher<Intent> pickImageActivityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -90,7 +88,6 @@ public class ProfileFragment extends Fragment {
                     }
                 }
             }
-
     );
 
     private void loadUserInfo() {
@@ -102,19 +99,21 @@ public class ProfileFragment extends Fragment {
                         Object profileImageValue = snapshot.child("profileImage").getValue();
                         String profileImage = (profileImageValue != null) ? profileImageValue.toString() : "DefaultProfileImageURL";
                         binding.usernameTv.setText(username);
-
+                        binding.usernameTxAcc.setText(username);
                         if (!profileImage.isEmpty()) {
                             Glide.with(getContext()).load(profileImage).into(binding.profileAvatarImg);
-
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 
                     }
                 });
     }
+
+
+
+
     private void SelectImage() {
         Intent intent = new Intent();
         intent.setType("image/*");

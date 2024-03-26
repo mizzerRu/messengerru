@@ -5,5 +5,12 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+
+    <style name="Base.Widget.AppCompat.SearchView.">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#FFFFFF</item>
+    </style>
+
+
     <style name="Theme.RuMessanger" parent="Base.Theme.RuMessanger" />
 </resources>

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="62dp"
-        android:background="#373737"
+        android:background="#FF2C2C2C"
         app:layout_constraintBottom_toBottomOf="@id/message_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

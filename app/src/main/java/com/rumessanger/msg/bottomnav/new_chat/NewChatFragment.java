@@ -1,7 +1,7 @@
 package com.rumessanger.msg.bottomnav.new_chat;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +17,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rumessanger.msg.MembersList.SearchContactActivity;
 import com.rumessanger.msg.databinding.FragmentNewchatBinding;
 import com.rumessanger.msg.users.User;
 import com.rumessanger.msg.users.UsersAdapter;
@@ -33,8 +34,20 @@ public class NewChatFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentNewchatBinding.inflate(inflater, container, false);
         loadUsers();
+
+        binding.searchContactNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchContactActivity.class);
+                startActivity(intent);
+            }
+        });
         return binding.getRoot();
     }
+
+
+
+
     private void loadUsers() {
         ArrayList<User> users = new ArrayList<>();
 
@@ -60,5 +73,6 @@ public class NewChatFragment extends Fragment {
 
             }
         });
+
     }
 }

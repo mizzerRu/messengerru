@@ -4,4 +4,19 @@
     <string name="message">Message</string>
     <string name="выход">выход</string>
     <string name="rumessanger">RuMessanger</string>
+    <string name="we_will_send_you_an_one_time_password_on_this_mobile_number">We will send you an one time password on this mobile number</string>
+    <string name="_7">+7</string>
+    <string name="next">NEXT</string>
+    <string name="_1234567890">-1234567890</string>
+    <string name="didn_t_receive_the_code">Didn\'t receive the code</string>
+    <string name="VERIFY">VERIFY\n</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="verification">Verification</string>
+    <string name="enter_the_code_sent_to">Enter the code sent to</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="verify">VERIFY</string>
+    <string name="привет">привет</string>
+    <string name="_123">123</string>
+    <string name="rumessenger">RuMessenger</string>
 </resources>

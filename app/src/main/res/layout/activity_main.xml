@@ -13,7 +13,7 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp" />
+        android:background="#FF2C2C2C" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -22,7 +22,7 @@
         android:background="#FF0000"
         android:foregroundTint="#FFFFFF"
         app:backgroundTint="#373737"
-        app:itemIconTint="#2BC990"
+        app:itemIconTint="#2D42FF"
         app:itemRippleColor="#00FFFFFF"
         app:itemTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
